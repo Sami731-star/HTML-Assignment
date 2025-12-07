@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Decrease Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Decrease Tool</h1>
+    <p id="number-display">Current Number: <span id="number">100</span></p>
+    <button id="decrease-btn">Decrease</button>
+
+    <script>
+        let currentNumber = 100;  // Starting number
+        const numberSpan = document.getElementById('number');
+        const decreaseBtn = document.getElementById('decrease-btn');
+
+        decreaseBtn.addEventListener('click', () => {
+            currentNumber -= 1;  // Decrease by 1
+            numberSpan.textContent = currentNumber;  // Update display
+        });
+    </script>
+</body>
+</html>
