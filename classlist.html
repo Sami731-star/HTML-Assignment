@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Unordered List with Class</title>
+    <style>
+        .list-item {
+            color: rgba(163, 81, 230, 1); /* Simple styling: red text */
+        }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+    </ul>
+    <br>
+    <button onclick="addItem()">Add New Item</button>
+    <script>
+        let itemCounter = 3;
+        function addItem() {
+            const list = document.getElementById('myList');
+            const newItem = document.createElement('li');
+            newItem.textContent = 'Item ' + itemCounter;
+            newItem.className = 'list-item';
+            list.appendChild(newItem);
+            itemCounter++;
+        }
+    </script>
+</body>
+</html>
