@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Items to Unordered List</title>
+</head>
+<body>
+    <ul id="myList">
+        <!-- Existing list items -->
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <br>
+    <button onclick="addItem()">Add New Item</button>
+    <script>
+        let itemCounter = 3; // Start at 3 since Item 1 and Item 2 are already there
+        function addItem() {
+            // Get the unordered list
+            const list = document.getElementById('myList');
+            
+            // Create a new list item with the next number
+            const newItem = document.createElement('li');
+            newItem.textContent = 'Item ' + itemCounter;
+            
+            // Append the new item to the list
+            list.appendChild(newItem);
+            
+            // Increment the counter for the next item
+            itemCounter++;
+        }
+    </script>
+</body>
+</html>
