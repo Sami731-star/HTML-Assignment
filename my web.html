@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniform Buttons Example</title>
+    <style>
+        /* Optional: Basic page styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        button {
+            margin: 5px;
+        }
+        h1 {
+            text-align: center;
+            text-emphasis-style: initial;
+
+        }
+        p {
+            text-align: center;
+            font-weight: bold ;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shadow Clone Closet</h1>
+        <p>Anime-inspired streetwear crafted for true shinobi style</p>
+        
+        <!-- Sample buttons with varied initial styles -->
+        <button style="background-color: red; color: white;">Shirt</button>
+        <button style="background-color: green; padding: 5px;">T shirt</button>
+        <button style="background-color: blueviolet;"> Denim Pant</button>
+        <button style="border: 2px solid black; font-size: 12px;">Jaket</button>
+        <button style ="background-color:black; font-size: 12px; ">Huddi</button>
+        
+        <p>Get all exclucive collaction afortable prices</p>
+    </div>
+
+    <script>
+        // JavaScript to make all buttons look the same
+        // Select all button elements on the page
+        const buttons = document.querySelectorAll('button');
+
+        // Define uniform styles (customize as needed)
+        const uniformStyles = {
+            backgroundColor: '#007bff',  // Blue background
+            color: '#ffffff',            // White text
+            border: 'none',              // No border
+            padding: '10px 20px',        // Padding for size
+            borderRadius: '5px',         // Rounded corners
+            fontSize: '16px',            // Font size
+            cursor: 'pointer',           // Pointer cursor on hover
+            transition: 'background-color 0.3s'  // Smooth hover effect
+        };
+
+        // Apply styles to each button
+        buttons.forEach(button => {
+            Object.assign(button.style, uniformStyles);
+            
+            // Optional: Add hover effect
+            button.addEventListener('mouseenter', () => {
+                button.style.backgroundColor = '#0056b3';  // Darker blue on hover
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.backgroundColor = '#007bff';  // Back to original
+            });
+        });
+    </script>
+</body>
+</html>
