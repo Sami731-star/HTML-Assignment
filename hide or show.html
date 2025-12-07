@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stylish Hide/Show Sections</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #18115c;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #030303;
+        }
+        button {
+            background-color: #df5858;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-style: italic;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e23232;
+        }
+        .section {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e8;
+            border-left: 5px solid #2f3149;
+            border-radius: 4px;
+        }
+        .section p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .section h2 {
+            color: #0c0c0c;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Pillar of Success</h1>
+        <button id="toggleButton1">Discipline</button>
+        <div id="section1" class="section">
+            <h2>Section 1: Introduction</h2>
+            <p>Discipline is the strongest pillar of success because it teaches you to act based on commitment, not emotion. It means showing up even when you are tired, unmotivated, or discouraged. Discipline builds habits, and habits shape your future. When you learn to control your actions instead of letting your feelings control you, you gain the power to move forward every day with purpose. Without discipline, every goal collapses; with it, any goal becomes possible.</p>
+           
+
+        <button id="toggleButton2">Consistency</button>
+        <div id="section2" class="section">
+            <h2>Section 2: Details</h2>
+            <p>Consistency is the silent force that turns small efforts into big achievements. It is not about doing something perfectly—it’s about doing it regularly. Even tiny steps, when repeated every day, create massive long-term growth. A consistent person may not be the fastest, but they always finish the race. Consistency builds momentum, sharpens skills, and proves to you that progress is happening even when it feels slow.</p>
+            
+            
+        </div>
+
+        <button id="toggleButton3">Focus</button>
+        <div id="section3" class="section">
+            <h2>Section 3: Conclusion</h2>
+            <p>ocus is the ability to direct your attention and energy toward what truly matters. In a world full of distractions, focus becomes a superpower that sets successful people apart. It helps you avoid wasting time on unimportant things and allows you to dive deeper into your goals with clarity. When your mind is focused, your actions become sharper, your decisions become stronger, and your path becomes clearer. Focus multiplies the impact of every effort you make.</p>
+            
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle a section
+        function toggleSection(buttonId, sectionId) {
+            const button = document.getElementById(buttonId);
+            const section = document.getElementById(sectionId);
+
+            button.addEventListener('click', () => {
+                if (section.style.display === 'none' || section.style.display === '') {
+                    section.style.display = 'block';
+                    button.textContent = 'Hide ' + button.textContent.split(' ')[1];
+                } else {
+                    section.style.display = 'none';
+                    button.textContent = 'Show ' + button.textContent.split(' ')[1];
+                }
+            });
+        }
+
+        // Initialize toggles for each section
+        toggleSection('toggleButton1', 'section1');
+        toggleSection('toggleButton2', 'section2');
+        toggleSection('toggleButton3', 'section3');
+    </script>
+</body>
+</html>
