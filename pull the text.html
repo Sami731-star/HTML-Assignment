@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(to right, #ff7e5f, #feb47b); font-family: Arial, sans-serif; }
+.box { padding: 20px; border-radius: 10px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: center; transition: all 0.5s ease; }
+.box:hover { transform: scale(1.05); }
+.text { font-size: 16px; color: #333; transition: font-size 0.5s ease; }
+</style>
+</head>
+<body>
+<div class="box">
+<p id="text" class="text">"I'm not lazy, I'm just on energy-saving mode!"</p>
+</div>
+<script>
+const quotes = ["I'm not lazy, I'm just on energy-saving mode!", "My bed and I are perfect for each other… but my alarm clock keeps trying to break us up!", "I’m on a seafood diet. I see food… and I eat it.."];
+let i = 0; document.getElementById('text').onmouseenter = () => { i = (i+1)%quotes.length; text.style.fontSize = i%2 ? '24px' : '16px'; text.textContent = quotes[i]; };
+</script>
+</body>
+</html>
