@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Color Change Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: bisque;
+        }
+        .hover-text {
+            color: black; 
+            background-color: white; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            cursor: pointer;
+            transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+        }
+        .hover-text:hover {
+            color: rgb(255, 255, 255); /* Text color on hover */
+            background-color: rgb(24, 2, 66); /* Background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>SWIPE THE MOUSE</h1>
+    <p class="hover-text">If this color changes, you’ll love me!</p>
+</body>
+</html>
