@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Field Focus Example</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: rgb(149, 214, 245);
+        }
+        form {
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            background-color: #9bcaf3; 
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        h1{
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        }
+        h2{
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uttara Universiy</h1>
+    <h2>performing Arts Club</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="Batch">Batch:</label>
+        <input type="Batch" id="Batch" name="Bacth" placeholder="Enter your Batch">
+
+        <label for="ID">ID:</label>
+        <textarea id="ID" name="ID"  placeholder="Enter your ID"></textarea>
+
+        <label for="Depertment">Depertment:</label>
+        <select id="Depertment" name="Depertment">
+            <option value="">Select your Depertment</option>
+            <option value="CSE">CSE</option>
+            <option value="BBA">BBA</option>
+            <option value="ENGLISH">ENGLISH</option>
+            <option value="ISLAMIC STUDIES">ISLAMIC STUDIES</option>
+            <option value="FDT">FDT</option>
+            <option value="BANGLA">BANGLA</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
