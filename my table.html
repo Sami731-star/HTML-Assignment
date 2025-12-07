@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add and Edit Rows in Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Existing rows can go here -->
+        </tbody>
+    </table>
+    <br>
+    <button onclick="addRow()">Add New Row</button>
+
+    <script>
+        function addRow() {
+            // Get the table body
+            const tableBody = document.querySelector('#myTable tbody');
+            
+            // Create a new row
+            const newRow = document.createElement('tr');
+            
+            // Create input cells for editable fields
+            const nameCell = document.createElement('td');
+            const nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.value = 'New Name'; // Default value
+            nameCell.appendChild(nameInput);
+            
+            const ageCell = document.createElement('td');
+            const ageInput = document.createElement('input');
+            ageInput.type = 'number';
+            ageInput.value = '25'; // Default value
+            ageCell.appendChild(ageInput);
+            
+            const cityCell = document.createElement('td');
+            const cityInput = document.createElement('input');
+            cityInput.type = 'text';
+            cityInput.value = 'New City'; // Default value
+            cityCell.appendChild(cityInput);
+            
+            // Add an actions cell with a delete button (optional)
+            const actionsCell = document.createElement('td');
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.onclick = function() {
+                tableBody.removeChild(newRow);
+            };
+            actionsCell.appendChild(deleteBtn);
+            
+            // Append cells to the row
+            newRow.appendChild(nameCell);
+            newRow.appendChild(ageCell);
+            newRow.appendChild(cityCell);
+            newRow.appendChild(actionsCell);
+            
+            // Append the row to the table body
+            tableBody.appendChild(newRow);
+        }
+    </script>
+</body>
+</html>
